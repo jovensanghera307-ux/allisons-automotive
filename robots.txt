@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update with the real domain before launch
+Sitemap: https://REPLACE-WITH-DOMAIN.com/sitemap.xml
