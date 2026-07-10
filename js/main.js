@@ -39,6 +39,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Rotating review quote in the hero
+  var quoteEl = document.getElementById("hero-quote");
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (quoteEl && !reducedMotion) {
+    var quotes = [
+      '"HANDS DOWN the most knowledgeable mechanic in the area."',
+      '"The nicest, most professional, honest businessman I have ever met." — Peggy M.',
+      '"Nobody could even look at my car for two weeks — then I found Allison\'s." — Lily H.',
+      '"All my warning lights came on — Allison\'s knew exactly what to do." — Tara C.'
+    ];
+    var quoteIndex = 0;
+    setInterval(function () {
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+      quoteEl.classList.add("fading");
+      setTimeout(function () {
+        quoteEl.textContent = quotes[quoteIndex];
+        quoteEl.classList.remove("fading");
+      }, 400);
+    }, 5000);
+  }
+
   // Scroll-reveal animation
   if ("IntersectionObserver" in window) {
     var observer = new IntersectionObserver(
