@@ -12,6 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Header depth on scroll
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("scrolled", window.scrollY > 10);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
   // Footer year
   var yearEl = document.getElementById("year");
   if (yearEl) {
