@@ -390,25 +390,6 @@ h3 { font-size: 1.5rem; }
   color: #b9bdc4;
 }
 
-.section-dark h2 span {
-  color: var(--color-accent-bright);
-}
-
-/* Dark card variant (customs section) */
-.card.card-dark {
-  background: var(--color-dark-2);
-  border-color: #33363e;
-  border-top-color: var(--color-accent);
-}
-
-.card.card-dark h3 {
-  color: var(--color-white);
-}
-
-.card.card-dark p {
-  color: #b9bdc4;
-}
-
 /* ---------- Service cards ---------- */
 
 .card-grid {
